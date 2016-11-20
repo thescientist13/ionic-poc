@@ -42,7 +42,6 @@ angular.module('starter', ['ionic'])
       inputPlaceholder: 'What do you need to do?',
       okText: 'Create Task'
     }).then(function(response){
-      console.log('response', response);
 
       if(angular.isDefined(response)){
         $scope.tasks.push({
@@ -51,6 +50,7 @@ angular.module('starter', ['ionic'])
         });
       }
 
+      $ionicListDelegate.closeOptionButtons();
     })
   };
 
